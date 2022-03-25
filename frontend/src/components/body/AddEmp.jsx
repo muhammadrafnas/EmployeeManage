@@ -108,6 +108,9 @@ export default function DialogBox() {
       .typeError("Enter Valid Phone number")
       .required("Required*"),
     desigination: Yup.string().required("Required*"),
+    imageOne: Yup.mixed().test("required","upload the image",(value)=>{
+      return value && value.length
+    })
     
   });
   const {
